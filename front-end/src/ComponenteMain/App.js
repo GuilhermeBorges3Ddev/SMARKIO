@@ -1,8 +1,9 @@
 import React from 'react';
-import './App.css';
+import './EstiloMain/App.css';
+import './EstiloMain/bg.jpg';
 
 //Importação dos componentes carregados dentro de App()
-import Titulos from '../Componentes/Titulos';
+import Listagens from '../Componentes/Listagens';
 import Formulario from '../Componentes/Formulario';
 import ClimaInfo from '../Componentes/ClimaInfo';
 
@@ -59,19 +60,31 @@ class App extends React.Component{
 
   render(){
     return (
-      <div className="App">
-        <Titulos/>
-        <Formulario getData={this.getData}/>
-        <ClimaInfo
-          temperatura={this.state.temperatura}
-          cidade={this.state.cidade}
-          pais={this.state.pais}
-          umidade={this.state.umidade}
-          latitude={this.state.latitude}
-          longitude={this.state.longitude}
-          error={this.state.error}
-        />
-      </div>
+      <div>
+        <div className="wrapper">
+          <div className="main">
+            <div className="container">
+              <div className="row">
+              <div className="col-6 form-container pt-5">
+                    <Formulario getData={this.getData}/>
+                    <ClimaInfo
+                      temperatura={this.state.temperatura}
+                      cidade={this.state.cidade}
+                      pais={this.state.pais}
+                      umidade={this.state.umidade}
+                      latitude={this.state.latitude}
+                      longitude={this.state.longitude}
+                      error={this.state.error}
+                      />
+                  </div>
+                  <div className="col-6 title-container">
+                    <Listagens/>
+                  </div>
+                </div>
+              </div>    
+            </div>
+          </div>
+        </div> 
     );
   }
 
