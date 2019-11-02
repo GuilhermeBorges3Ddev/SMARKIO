@@ -1,5 +1,6 @@
 import React from 'react';
-import './App.css';
+import './EstiloMain/App.css';
+import './EstiloMain/bg.jpg';
 
 //Importação dos componentes carregados dentro de App()
 import Titulos from '../Componentes/Titulos';
