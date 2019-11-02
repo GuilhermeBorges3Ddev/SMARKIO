@@ -68,7 +68,7 @@ class App extends React.Component{
                   <div className="col-6 title-container">
                     <Titulos/>
                   </div>
-                  <div className="col-6 form-container">
+                  <div className="col-6 form-container pt-5">
                     <Formulario getData={this.getData}/>
                     <ClimaInfo
                       temperatura={this.state.temperatura}

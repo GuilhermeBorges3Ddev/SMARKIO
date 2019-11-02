@@ -3,8 +3,8 @@ import React from 'react';
 const Titulos = () => {
     return (
       <div>
-        <h1>Buscador meteorológico</h1>
-        <p>Encontre temperatura, umidade, clima e etc...</p>
+        <h1 className="title-container__title">Buscador meteorológico</h1>
+        <p  className="title-container__subtitle">Encontre temperatura, umidade, clima e etc...</p>
       </div>
     );
 };

@@ -5,37 +5,37 @@ import React from 'react';
 */
 
 const ClimaInfo = props => (  
-  <div>
+  <div className="weather_info">
     {props.temperatura && 
-      <p>Cidade pesquisada: {props.cidade}</p>
+      <p className="weather__key">Cidade pesquisada: <span className="weather__value">{props.cidade}</span> </p>
     }
 
     {props.pais && 
-      <p>Sigla do país da cidade buscada: {props.pais}</p>
+      <p className="weather__key">Sigla do país da cidade buscada: <span className="weather__value">{props.pais}</span> </p>
     }
         
     {props.temperatura && 
-      <p>Temperatura: {props.temperatura}º</p>
+      <p className="weather__key">Temperatura: <span className="weather__value">{props.temperatura}º</span> </p>
     }
         
     {props.umidade && 
-      <p>Umidade: {props.umidade}%</p>
+      <p className="weather__key">Umidade: <span className="weather__value">{props.umidade}%</span> </p>
     }
         
     {props.descricao && 
-      <p>Condições: {props.descricao}</p>
+      <p className="weather__key">Condições: <span className="weather__value">{props.descricao}</span> </p>
     }
 
     {props.latitude &&
-      <p>Latitude: {props.latitude}</p>
+      <p className="weather__key">Latitude: <span className="weather__value">{props.latitude}</span> </p>
     }
 
     {props.longitude &&
-      <p>Longitude: {props.longitude}</p>
+      <p className="weather__key">Longitude: <span className="weather__value">{props.longitude}</span> </p>
     }
 
     {props.error &&
-      <p>{props.error}</p>
+      <p className="weather__error mt-4">{props.error}</p>
     }
   </div>
 );
