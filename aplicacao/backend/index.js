@@ -9,8 +9,21 @@ const connection = mysql.createConnection({
 });
 
 ///////////////////////////////////////////// INSERÇÃO ////////////////////////////////////////////////////////////////////////
-
-
+function addRows(conn){
+    const sql = "INSERT INTO cidadeClima(cidade, pais, temperatura, umidade, latitude, longitude) VALUES ?";
+    const values = [
+        ['Miami Vice', 'US', 28.7, 45, 25.77, 80.20],
+        ['Sao Paulo Dist', 'BR', 29.43, 54, 23.55, 46.63],
+        ['Savassi Area', 'BR', 27.09, 57, 19.92, 43.95],
+        ['Ski Montain City', 'AR', 26.33, 45, 34.61, 58.44],
+        ['Montevideu do Norte', 'URU', 24, 24, 6.06, 42.74]
+    ];
+    conn.query(sql, [values], function (error, results, fields){
+    if(error) return console.log(error);
+    console.log('adicionou registros!');
+    conn.end();//fecha a conexão
+    });
+}
 ///////////////////////////////////////////// LISTA TODAS AS CIDADES E CLIMAS /////////////////////////////////////////////////
 
 
@@ -20,7 +33,7 @@ const connection = mysql.createConnection({
 ///////////////////////////////////////////// LISTA AS ÚLTIMAS 5 CIDADES PESQUISADAS //////////////////////////////////////////
 
 
-// Força a criação da tabela "cidadeClima" caso não tenha sido criada em queriesSQL.sql
+////////////////////////////////////////// Força a criação da tabela "cidadeClima" caso não tenha sido criada em queriesSQL.sql
 function createTable(conn){
     const sql = "CREATE TABLE IF NOT EXISTS cidadeClima (\n"+
     "id_cidade int AUTO_INCREMENT PRIMARY KEY,\n"+
