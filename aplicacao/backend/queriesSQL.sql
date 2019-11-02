@@ -27,3 +27,9 @@ FROM cidadeClima
 GROUP BY cidade 
 ORDER BY Num_de_consultas DESC
 LIMIT 5;
+
+/* LISTAGEM DAS 5 ÚLTIMAS CIDADES PESQUISADAS  */
+SELECT cidade
+FROM cidadeClima  
+ORDER BY id_cidade DESC
+LIMIT 5;
