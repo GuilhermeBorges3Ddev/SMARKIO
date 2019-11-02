@@ -12,7 +12,9 @@ class App extends React.Component{
 
   getData = async (e) => {
     e.preventDefault();//Previne que a requisição disparada não resete pelo reload do React
-    const api_req = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=Washington,us&appid=${API_KEY}&units=metric`); 
+    const cidade = e.target.elements.cidade.value;
+    const pais = e.target.elements.pais.value;
+    const api_req = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cidade},${pais}&appid=${API_KEY}&units=metric`); 
     const data = await api_req.json();
     console.log(data);
   }
