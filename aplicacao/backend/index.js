@@ -21,7 +21,7 @@ function addRows(conn){
     conn.query(sql, [values], function (error, results, fields){
     if(error) return console.log(error);
     console.log('adicionou registros!');
-    conn.end();//fecha a conexão
+    conn.end();
     });
 }
 ///////////////////////////////////////////// LISTA TODAS AS CIDADES E CLIMAS /////////////////////////////////////////////////
