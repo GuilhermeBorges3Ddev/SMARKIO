@@ -31,14 +31,26 @@ class App extends React.Component{
     
     console.log(data);
 
-    this.setState({
-      temperatura: data.main.temp,
-      cidade: data.name,
-      pais: data.sys.country,
-      umidade: data.main.humidity,
-      descricao: data.weather[0].description,
-      error: ""
-    });
+    //Validação de cidade e país 
+    if(cidade && pais){
+      this.setState({
+        temperatura: data.main.temp,
+        cidade: data.name,
+        pais: data.sys.country,
+        umidade: data.main.humidity,
+        descricao: data.weather[0].description,
+        error: ""
+      });
+    }else{
+      this.setState({
+        temperatura: undefined,
+        cidade: undefined,
+        pais: undefined,
+        umidade: undefined,
+        descricao: undefined,
+        error: "Por favor,digite uma combinação válida de cidade e país!"
+      });
+    }
 
   }
 

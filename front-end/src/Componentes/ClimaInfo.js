@@ -23,6 +23,10 @@ class ClimaInfo extends React.Component {
         {this.props.descricao && 
           <p>Condições: { this.props.descricao }</p>
         }
+
+        {this.props.error &&
+          <p>{ this.props.error }</p>
+        }
       </div>
     );
   }
