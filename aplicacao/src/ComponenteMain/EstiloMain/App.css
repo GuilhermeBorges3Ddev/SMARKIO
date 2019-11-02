@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
 
-.alert-orange{
-  background-color: #f16051;
+.alert-dark{
+  background-color: black;
 }
 
 body {

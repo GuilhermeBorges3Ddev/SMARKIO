@@ -11,13 +11,13 @@ const Listagens = () => {
         </div>
 
         <div className="subtitle" id="mostSearch">
-          <div class="alert alert-orange text-white" role="alert">
+          <div class="alert alert-dark text-white" role="alert">
             Top 5 cidades mais pesquisadas:
           </div>
         </div>
 
         <div className="subtitle" id="lastSearch">
-          <div class="alert alert-orange text-white" role="alert">
+          <div class="alert alert-dark text-white" role="alert">
             Últimas cidades pesquisadas:
           </div>
         </div>
