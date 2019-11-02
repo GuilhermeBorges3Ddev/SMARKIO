@@ -29,7 +29,7 @@ ORDER BY Num_de_consultas DESC
 LIMIT 5;
 
 /* LISTAGEM DAS 5 ÚLTIMAS CIDADES PESQUISADAS  */
-SELECT cidade
+SELECT cidade AS Ultimas_cidades_pesquisadas
 FROM cidadeClima  
 ORDER BY id_cidade DESC
 LIMIT 5;
