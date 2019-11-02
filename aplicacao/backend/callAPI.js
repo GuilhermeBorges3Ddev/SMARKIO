@@ -98,3 +98,6 @@ function createTable(conn){
     console.log('Tabela dos dados climáticos das cidades criada!');
     });
 }
+
+////////////////////////////////////////// EXPORTANDO ROTAS PARA O APP.JS DO REACT///////////////////////////////////////////////
+module.exports = router;
