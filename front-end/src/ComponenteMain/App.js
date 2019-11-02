@@ -65,10 +65,7 @@ class App extends React.Component{
           <div className="main">
             <div className="container">
               <div className="row">
-                  <div className="col-6 title-container">
-                    <Titulos/>
-                  </div>
-                  <div className="col-6 form-container pt-5">
+              <div className="col-6 form-container pt-5">
                     <Formulario getData={this.getData}/>
                     <ClimaInfo
                       temperatura={this.state.temperatura}
@@ -79,6 +76,9 @@ class App extends React.Component{
                       longitude={this.state.longitude}
                       error={this.state.error}
                       />
+                  </div>
+                  <div className="col-6 title-container">
+                    <Titulos/>
                   </div>
                 </div>
               </div>    

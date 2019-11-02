@@ -1,10 +1,16 @@
 import React from 'react';
 
+import Logo from "../ComponenteMain/EstiloMain/smarkio.png";
+
 const Titulos = () => {
     return (
-      <div>
-        <h1 className="title-container__title">Buscador meteorológico</h1>
-        <p  className="title-container__subtitle">Encontre temperatura, umidade, clima e etc...</p>
+      <div className="mt-0">
+        
+        <div className="title">
+          <img src={Logo} alt="smarkioLogo"/>
+        </div>
+        
+        <p  className="subtitle">Encontre temperatura, umidade, clima e etc...</p>
       </div>
     );
 };
