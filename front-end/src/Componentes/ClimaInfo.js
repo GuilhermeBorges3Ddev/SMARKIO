@@ -13,15 +13,23 @@ class ClimaInfo extends React.Component {
         }
         
         {this.props.temperatura && 
-          <p>Temperatura: { this.props.temperatura }</p>
+          <p>Temperatura: { this.props.temperatura }º</p>
         }
         
         {this.props.umidade && 
-          <p>Umidade: {this.props.umidade}</p>
+          <p>Umidade: {this.props.umidade}%</p>
         }
         
         {this.props.descricao && 
           <p>Condições: { this.props.descricao }</p>
+        }
+
+        {this.props.latitude &&
+          <p>Latitude: { this.props.latitude }</p>
+        }
+
+        {this.props.longitude &&
+          <p>Longitude: { this.props.longitude }</p>
         }
 
         {this.props.error &&

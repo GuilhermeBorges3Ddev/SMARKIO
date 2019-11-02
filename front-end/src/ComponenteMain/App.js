@@ -16,7 +16,8 @@ class App extends React.Component{
     cidade: undefined,
     pais: undefined,
     umidade: undefined,
-    descricao: undefined,
+    latitude: undefined,
+    longitude: undefined,
     error: undefined
   }
 
@@ -38,7 +39,8 @@ class App extends React.Component{
         cidade: data.name,
         pais: data.sys.country,
         umidade: data.main.humidity,
-        descricao: data.weather[0].description,
+        latitude: data.coord.lat,
+        longitude: data.coord.lon,
         error: ""
       });
     }else{
@@ -47,7 +49,8 @@ class App extends React.Component{
         cidade: undefined,
         pais: undefined,
         umidade: undefined,
-        descricao: undefined,
+        latitude: undefined,
+        longitude: undefined,
         error: "Por favor,digite uma combinação válida de cidade e país!"
       });
     }
@@ -64,7 +67,8 @@ class App extends React.Component{
           cidade={this.state.cidade}
           pais={this.state.pais}
           umidade={this.state.umidade}
-          descricao={this.state.descricao}
+          latitude={this.state.latitude}
+          longitude={this.state.longitude}
           error={this.state.error}
         />
       </div>
