@@ -3,7 +3,8 @@ CREATE DATABASE smarkioWeather;
 USE smarkioWeather;
 
 CREATE TABLE IF NOT EXISTS cidadeClima (
-	cidade VARCHAR(200) PRIMARY KEY,
+	id_cidade INT AUTO_INCREMENT PRIMARY KEY,
+	cidade VARCHAR(200) NOT NULL,
 	pais VARCHAR(150) NOT NULL,
     temperatura FLOAT,
     umidade FLOAT,
@@ -19,3 +20,10 @@ INSERT INTO cidadeClima(cidade, pais, temperatura, umidade, latitude, longitude)
 INSERT INTO cidadeClima(cidade, pais, temperatura, umidade, latitude, longitude) VALUES ('Montevideu do Norte', 'URU', 24, 24, 6.06, 42.74); 
 
 SELECT * FROM cidadeClima;
+
+/* LISTAGEM DAS 5 CIDADES MAIS PESQUISADAS  */
+SELECT cidade, COUNT(*) AS Num_de_consultas 
+FROM cidadeClima 
+GROUP BY cidade 
+ORDER BY Num_de_consultas DESC
+LIMIT 5;
