@@ -3,7 +3,7 @@ import './App.css';
 
 //Importação dos componentes carregados dentro de App()
 import Titulos from '../Componentes/Titulos';
-import Formularios from '../Componentes/Formularios';
+import Formulario from '../Componentes/Formulario';
 import ClimaInfo from '../Componentes/ClimaInfo';
 
 const API_KEY = "81101292e91a941f627ea27ec02cf4bd";
@@ -61,7 +61,7 @@ class App extends React.Component{
     return (
       <div className="App">
         <Titulos/>
-        <Formularios getData={this.getData}/>
+        <Formulario getData={this.getData}/>
         <ClimaInfo
           temperatura={this.state.temperatura}
           cidade={this.state.cidade}
