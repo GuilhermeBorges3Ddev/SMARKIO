@@ -3,7 +3,7 @@ import './EstiloMain/App.css';
 import './EstiloMain/bg.jpg';
 
 //Importação dos componentes carregados dentro de App()
-import Titulos from '../Componentes/Titulos';
+import Listagens from '../Componentes/Listagens';
 import Formulario from '../Componentes/Formulario';
 import ClimaInfo from '../Componentes/ClimaInfo';
 
@@ -78,7 +78,7 @@ class App extends React.Component{
                       />
                   </div>
                   <div className="col-6 title-container">
-                    <Titulos/>
+                    <Listagens/>
                   </div>
                 </div>
               </div>    

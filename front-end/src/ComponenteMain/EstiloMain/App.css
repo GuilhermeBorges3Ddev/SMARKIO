@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
 
+.alert-orange{
+  background-color: #f16051;
+}
+
 body {
   font-family: "Open Sans", serif;
 }
@@ -20,6 +24,10 @@ body {
   box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
   width: 80%;
   margin: 0 auto;
+}
+
+#lastSearch{
+  margin-top: 130px;
 }
 
 .title-container {
@@ -41,7 +49,9 @@ body {
 .subtitle {
   font-style: italic;
   font-weight: 100;
-  color: white;
+  color: #f16051;
+  font-weight: lighter;
+  margin-top: 30px;
   letter-spacing: 1px;
   line-height: 1.5;
   font-family: "Merriweather", serif;
