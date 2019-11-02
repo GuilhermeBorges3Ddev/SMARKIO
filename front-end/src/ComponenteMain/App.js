@@ -10,7 +10,8 @@ const API_KEY = "81101292e91a941f627ea27ec02cf4bd";
 
 class App extends React.Component{
 
-  getData = async () => {
+  getData = async (e) => {
+    e.preventDefault();//Previne que a requisição disparada não resete pelo reload do React
     const api_req = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=Washington,us&appid=${API_KEY}&units=metric`); 
     const data = await api_req.json();
     console.log(data);
@@ -20,7 +21,7 @@ class App extends React.Component{
     return (
       <div className="App">
         <Titulos/>
-        <Formularios/>
+        <Formularios getData={this.getData}/>
         <ClimaInfo/>
       </div>
     );
