@@ -76,6 +76,6 @@ Estas mesmas URL's disparadas automaticamente pelo Node.JS fazem funcionar o lad
  
 ***
 
-::: warning
+::: 
 ***(c) Código e documentação**: Guilherme S. Borges*
 :::
