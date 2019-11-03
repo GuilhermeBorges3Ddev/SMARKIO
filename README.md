@@ -8,7 +8,7 @@ __API Consumida:__
  Retorna na interface os dados: nome da cidade pesquisada, sigla do país da cidade buscada, temperatura, umidade,                
 latitude e longitude.
 ---
-### **Instruções para executar o projeto:** 8-)
+### **Instruções para executar o projeto:** 
 ---
 #### **1) Crie um diretório para clonar o projeto:**
 Um exemplo seria criar um diretório `/git`:
